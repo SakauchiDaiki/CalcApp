@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        double number1 = Double.parseDouble(mEditNum1.getText().toString());
 //        double number2 = Double.parseDouble(mEditNum2.getText().toString());
 
-        // 判定うまくできず。
         try {
             double number1 = Double.parseDouble(mEditNum1.getText().toString());
             double number2 = Double.parseDouble(mEditNum2.getText().toString());
@@ -75,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     intent.putExtra("OPERATOR", "/");
                 } else {
                     Toast.makeText(this, "0で割ることはできません", Toast.LENGTH_LONG).show();
+                    return;
                 }
             }
 
